@@ -55,18 +55,13 @@
 			<key>DropOem</key>
 			<false/>
 			<key>Generate</key>
-			<dict>
-				<key>CStates</key>
-				<true/>
-				<key>PStates</key>
-				<true/>
-			</dict>
+			<true/>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v slide=0 darkwake=0 npci=0x3000 nv_disable=1</string>
+		<string>-v slide=0 darkwake=0 npci=0x3000 nvda_drv=1</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -155,7 +150,7 @@
 			<true/>
 		</dict>
 		<key>Theme</key>
-		<string>metal</string>
+		<string>Minimalism</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -191,22 +186,16 @@
 		<true/>
 		<key>KextsToPatch</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 31 in XHCI kext (X99-series) 10.12, GA-X99P-SLI has possible 26 ports?</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g710////EA==
-				</data>
-				<key>Name</key>
-				<string>AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>
-				g710////IA==
-				</data>
-			</dict>
+		    <dict>
+	            <key>Comment</key>
+	            <string>change 15 port limit to 31 in XHCI kext (X99-series) 10.12, GA-X99P-SLI has possible 26 ports?</string>
+	            <key>Find</key>
+	            <data>g710////EA==</data>
+	            <key>Name</key>
+	            <string>AppleUSBXHCIPCI</string>
+	            <key>Replace</key>
+	            <data>g710////IA==</data>
+	        </dict>
 			<dict>
 				<key>Comment</key>
 				<string>5960XPatch 10.12 by mano</string>
