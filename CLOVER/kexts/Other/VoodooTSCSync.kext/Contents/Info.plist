@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<!---Kext modified with VooDooTSCSync Cofigurator © 2017 Pietro Caruso-->
+<!---Config created for cpu: Intel xeon e5 2650L-v3               (12 cores) (24 threads)-->
+<!---Note that you should edit the IOCPUNumber value to modify the core count for VoodooTSCSync, just remember that it must be equal to the thread count of the cpu you will use - 1-->
 <dict>
 	<key>BuildMachineOSBuild</key>
 	<string>11D50</string>
@@ -51,7 +54,7 @@
 			<key>IOPropertyMatch</key>
 			<dict>
 				<key>IOCPUNumber</key>
-				<integer>23</integer>
+                               <integer>23</integer>
 			</dict>
 			<key>IOProviderClass</key>
 			<string>AppleACPICPU</string>
